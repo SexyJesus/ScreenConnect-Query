@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+    <html>
+        <head>
+            <title>Screen Connect Query</title>
+
+            <!--Import Lato Font-->
+            <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+            <!--Style Block-->
+            <style>
+            body {
+            background-color: darkslategrey
+            }
+            .fontClass {
+            font-family:lato;
+            color:darkgrey;
+            }
+            </style>
+
+            <!--JS Function-->
+            <script>
+                function scSearch()
+                    var address = "ADDRESS HERE";
+                    var input = document.getElementById(Node).value;
+                    var query = address + input
+                    window.open(query, '_blank')
+            </script>
+        </head>
+
+        <body>
+            <div align="center" class="fontClass">
+                <img src="#">
+                <h1>SCREEN CONNECT QUERY</h1>
+                <h3>Enter the name of a PC, Server, or Node to search for it in SC</h3>
+                <form>
+                    <!--Form Element-->
+                    <input type="text" id="Node">
+                    <input type="submit" value="Nike" OnClick="scSearch">
+                </form>
+            </div>
+        </body>
+    </html>
+    
