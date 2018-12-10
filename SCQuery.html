@@ -6,26 +6,26 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
 		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
 			<title>Scream Connect</title>
 			
 			<script>
 				function scSearch()
 				{
 					var input = document.getElementById("Machine").value;
-					var address = "[URL PREFIX]" + input;
+					var address = "https://sc.4miles.com/Host#Access/All%20Machines/" + input;
 					window.open(address, '_blank')
 				}
 			</script>			
 			
 			<style>
+
 				.page-header {
-					background-color: rgb(243, 123, 124);
-					
+					background-color: rgb(243, 123, 124);					
 				}
 				.jumbotron {
 					background-color: #1B1B1B;
-					color: #878787;
-					
+					color: #878787;					
 				}
 
 				body {
@@ -57,11 +57,11 @@
 				}
 			</style>
 	</head>
-	
+	<!-- ----------------------------------------BODY LINE------------------------------------------- -->
 	<body>
 		<div align="center">
 			<div class="page-header">
-				<H4><br>"Developed" (lol) by Cody of the Salt.</H4>
+				<H4><br>For When You Can't Find the Damn Machine</H4>
 			</div>
 
 			<div class="jumbotron">
@@ -71,13 +71,28 @@
 				
 				<div class="col-md-4"></div>
 				<form class="form-inline">
-					<div class="form-group col-md-4 mb-2">
+					<!-- <div class="form-group col-md-4 mb-2">
+						<div class="input-group">
 						<input type="text" class="form-control" id="Machine" placeholder="Machine" autofocus> 
-						<button type="submit" class="btn btn-danger" OnClick="scSearch()">Do The Thing</button>					
-					</div>		
+						</div>
+						<button type="submit" class="btn btn-danger" OnClick="scSearch()">WHY?!</button>					
+					</div>	 -->
+
+					<!--Above is the old button format should something break-->
+					<!--Shits always breaking-->
+					
+					<div class="form-group col-md-4 mb-2">
+						<div class="input-group">
+							<span class="input-group-addon">Machine: </span>
+							<input type="text" id="Machine" class="form-control" autofocus>
+							<span class="input-group-btn">
+								<button class="btn btn-danger" type="submit" OnClick="scSearch()">Suck My 🍑</button>
+							</span>
+						</div>
+					</div>				
 				</form>
-				<div class="col-md-4"></div>
 			</div>
+			<h6>-Developed by Baby Hands-</h6>
 		</div>
 	</body>
 </html>
