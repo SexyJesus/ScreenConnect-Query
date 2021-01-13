@@ -10,10 +10,24 @@
 			<title>Scream Connect</title>
 			
 			<script>
-				function scSearch()
+				function scSearchRestricted()
 				{
-					var input = document.getElementById("Machine").value;
-					var address = "https://sc.4miles.com/Host#Access/All%20Machines/" + input;
+					var input = document.getElementById("Striven").value;
+					var address = "https://sc.4miles.com/Host#Access/All%20Machines%20-%20Restricted/" + input;
+					window.open(address, '_blank')
+				}
+
+				function scSearchServers()
+				{
+					var input = document.getElementById("Server").value;
+					var address = "https://sc.4miles.com/Host#Access/Servers%20by%20Company/" + input;
+					window.open(address, '_blank')
+				}
+
+				function scSearchWorkstations()
+				{
+					var input = document.getElementById("Workstation").value;
+					var address = "https://sc.4miles.com/Host#Access/Workstations%20by%20Company/" + input;
 					window.open(address, '_blank')
 				}
 			</script>			
@@ -21,15 +35,23 @@
 			<style>
 
 				.page-header {
-					background-color: rgb(243, 123, 124);					
+					background-color: #7289da;					
+				}
+				.btn-danger {
+    				background-color: #7289da;
+					border-color: #8fa4ec;
+				}
+				.btn-danger:hover {
+    				background-color: #8fa4ec;
+					border-color: #8fa4ec;
 				}
 				.jumbotron {
-					background-color: #1B1B1B;
-					color: #878787;					
+					background-color: #2f3136;
+					color: #8e9297;					
 				}
 
 				body {
-				background: #0B0B0B;
+				background: #202225;
 				}
 
 				h2 {
@@ -38,7 +60,7 @@
 				
 				h3 {
 				font-family: lato;
-				color: #878787;
+				color: #8e9297;
 				}
 
 				h4 {
@@ -52,7 +74,7 @@
 				
 				.border {   
 				border-width: 5px;   
-				border-color: rgb(0, 0, 0);   
+				border-color: #202225;   
 				border-style: Solid;
 				}
 			</style>
@@ -65,33 +87,56 @@
 			</div>
 
 			<div class="jumbotron">
-				<img src="Nick.jpg" height="200" class="border">
+				<a href="https://youtu.be/S73swRzxs8Y?t=16" target="_blank"><img src="Nick.jpg" height="200" class="border"></a>
 				<h1>SCREAM CONNECT</h1>
-				<h3>Enter a Machine name to search SC for the thing.</h3>
+				<h3>Restricted Machines (Stribhen)</h3>
+				
+				<div class="col-md-4"></div>
+				<form class="form-inline">		
+					<div class="form-group col-md-4 mb-2">
+						<div class="input-group">
+							<span class="input-group-addon">Restricted: </span>
+							<input type="text" id="Striven" class="form-control" autofocus>
+							<span class="input-group-btn">
+								<button class="btn btn-danger" type="submit" OnClick="scSearchRestricted()">Suck My 🍑</button>
+							</span>
+						</div>
+					</div>				
+				</form>
+
+				<br><br>
+				<h3>Servers</h3>
 				
 				<div class="col-md-4"></div>
 				<form class="form-inline">
-					<!-- <div class="form-group col-md-4 mb-2">
-						<div class="input-group">
-						<input type="text" class="form-control" id="Machine" placeholder="Machine" autofocus> 
-						</div>
-						<button type="submit" class="btn btn-danger" OnClick="scSearch()">WHY?!</button>					
-					</div>	 -->
-
-					<!--Above is the old button format should something break-->
-					<!--Shits always breaking-->
-					
 					<div class="form-group col-md-4 mb-2">
 						<div class="input-group">
-							<span class="input-group-addon">Machine: </span>
-							<input type="text" id="Machine" class="form-control" autofocus>
+							<span class="input-group-addon">Servers: </span>
+							<input type="text" id="Server" class="form-control" autofocus>
 							<span class="input-group-btn">
-								<button class="btn btn-danger" type="submit" OnClick="scSearch()">Suck My 🍑</button>
+								<button class="btn btn-danger" type="submit" OnClick="scSearchServers()">Suck My 🍑</button>
+							</span>
+						</div>
+					</div>				
+				</form>
+
+				<br><br>
+				<h3>Workstations</h3>
+				
+				<div class="col-md-4"></div>
+				<form class="form-inline">
+					<div class="form-group col-md-4 mb-2">
+						<div class="input-group">
+							<span class="input-group-addon">WorkStations: </span>
+							<input type="text" id="Workstation" class="form-control" autofocus>
+							<span class="input-group-btn">
+								<button class="btn btn-danger" type="submit" OnClick="scSearchWorkstations()">Suck My 🍑</button>
 							</span>
 						</div>
 					</div>				
 				</form>
 			</div>
+			<h6>v1.7.2</h6>
 			<h6>-Developed by Baby Hands-</h6>
 		</div>
 	</body>
